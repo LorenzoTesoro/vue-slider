@@ -29,5 +29,22 @@ createApp ({
                     }
                 ]
         }
+    },
+    methods: {
+        nextImg (){
+            //console.log('ho cliccato su next')
+            //console.log(this.slides.length)
+            this.activeImage++
+            if(this.activeImage > this.slides.length - 1){
+                this.activeImage = 0
+            }
+        },
+        prevImg (){
+            // console.log('ho cliccato su prev')
+            this.activeImage--
+            if(this.activeImage < 0){
+                this.activeImage = this.slides.length - 1
+            }
+        }
     }
 }).mount('#app')
