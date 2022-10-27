@@ -57,8 +57,12 @@ createApp ({
         },
         slideAutoplay(){
             setInterval(() => {
-                
-            }, 1000)
+                this.nextImg()
+            }, 3000)
         }
+    },
+    mounted(){
+        // console.log('sono partito')
+        this.slideAutoplay()
     }
 }).mount('#app')
