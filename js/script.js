@@ -55,14 +55,17 @@ createApp ({
                 return 'active';
             }
         },
-        slideAutoplay(){
-            setInterval(() => {
+        slideStartPlay(){
+            this.intervalId = setInterval(() => {
                 this.nextImg()
-            }, 3000)
+            }, 1000)
+        },
+        slideStopPlay(){
+            clearInterval(this.intervalId)
         }
     },
     mounted(){
         // console.log('sono partito')
-        this.slideAutoplay()
+        this.slideStartPlay()
     }
 }).mount('#app')
