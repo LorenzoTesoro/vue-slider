@@ -27,9 +27,9 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev" @click="prevImg(slides)"></div>
-                    <div class="next" @click="nextImg(slides)"></div>
-                    <img class="thumb" :src="thumb.image" alt="Svezia" v-for="(thumb,i) in slides"/>
+                    <div class="prev" @click="prevImg()"></div>
+                    <div class="next" @click="nextImg()"></div>
+                    <img class="thumb" :src="thumb.image" :class="activeSlide(i)" v-for="(thumb,i) in slides" @click="changeSlide(i)"/>
                 </div>
 
             </div>

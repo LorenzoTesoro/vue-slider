@@ -45,6 +45,15 @@ createApp ({
             if(this.activeImage < 0){
                 this.activeImage = this.slides.length - 1
             }
+        },
+        changeSlide (i){
+            // console.log(i);
+            this.activeImage = i
+        },
+        activeSlide (i){
+            if(this.activeImage === i){
+                return 'active';
+            }
         }
     }
 }).mount('#app')
