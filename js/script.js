@@ -54,6 +54,11 @@ createApp ({
             if(this.activeImage === i){
                 return 'active';
             }
+        },
+        slideAutoplay(){
+            setInterval(() => {
+                
+            }, 1000)
         }
     }
 }).mount('#app')
