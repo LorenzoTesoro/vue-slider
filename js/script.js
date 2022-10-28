@@ -58,7 +58,7 @@ createApp ({
         slideStartPlay(){
             this.intervalId = setInterval(() => {
                 this.nextImg()
-            }, 1000)
+            }, 3000)
         },
         slideStopPlay(){
             clearInterval(this.intervalId)
